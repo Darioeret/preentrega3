@@ -1,0 +1,388 @@
+// paleta de colores
+$color1:linear-gradient(to left, lightblue, blue);
+$color2:blue;
+// fuentes
+$fuente1:'Oswald', sans-serif;
+$fuente2: Arial, Helvetica, sans-serif;
+$fuente3: Georgia, 'Times New Roman', Times, serif;
+// tamaño de letra
+$letra1:20px;
+$letra2:50px;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=M+PLUS+1+Code:wght@300&family=Oswald&family=Pushster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: $color1;
+}
+.navbar{
+    border: solid 2px black;
+}
+.navbar img {
+    height: 100px;
+    width: 100px;
+}
+main h2{
+    color: black;
+}
+
+@mixin tamañoTituloprincipal ($color, $transform) {
+    color: $color;
+    transform: $transform;
+
+}
+
+.jumbotron{
+    background-image: url(img/viaje.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: $fuente1;
+    height: 300px;
+    margin: 0;
+    border:solid 2px black ;
+    .tituloPrincipal{
+        @include tamañoTituloprincipal (white, scale(1))
+
+
+    }
+    .subtituloPrincipal{
+        color: white;
+        font-size: $letra1;
+    }
+    
+}
+
+
+h2{
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: $letra2;
+    padding: 15px;
+    
+    
+}
+h2:hover{
+    color: chocolate;
+
+}
+.text-center::selection{
+    color: blue;
+}
+.text-center::first-letter{
+    color: burlywood;
+    font-size: 40px;
+}
+
+.nleft{
+height: 500px;
+background-color: lightblue;
+border:solid 2px black ;
+}
+.nleft p{
+    padding: 20px;
+    color: white;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+}
+.nleft p::selection{
+    color: yellow;
+}
+.nleft p::first-letter{
+    color: burlywood;
+    font-size: 25px;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+}
+.nright{
+height: 500px;
+background-color: lightcyan;
+background-image: url(img/arg-mapa.jpg);
+background-position: center;
+background-size: cover;
+border:solid 2px black ;
+}
+// ******************* .   SECCION DESTINOS   ********************
+.destinoContenedor{
+    background-color: aqua;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    .carrusel{
+        background-color: blue;
+        width: 60%;
+        max-height: 40vw;
+        .carousel{
+            .carousel-inner{
+                .carousel-item{
+                    img{
+                        height: 40vw;
+                    }
+                }
+            }
+        }
+    }
+    .texto{
+        background-color: burlywood;
+        width: 40vw;
+        height: 40vw;
+        
+        min-height: min-content;
+        padding: 2vw;
+        overflow-y: scroll;
+    }
+}
+// ******************* .   SECCION CONTACTO   ********************
+.contenedorContacto{
+    background-color: cadetblue;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+    .formulario{
+        padding: 3vw;
+    
+    }
+    .imagen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: chocolate;
+        img{
+            width: 40vw;
+        }
+    }
+}
+
+.carousel-indicators li{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    }
+    .carousel-item{
+        text-align: center;
+    }
+
+    .carousel-item h3{
+        
+        font-family:$fuente2;
+        color:yellow;
+        font-size: 80px;
+    }
+    .carousel-item p{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        color: yellow;
+        font-size: 40px;
+        
+        
+    }
+    main{
+        background-color: $color2;
+    }
+    
+    .contacto2 img{
+        height: 300px;
+        width: 500px;
+        
+    }
+    .contacto1{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        }
+        #cas1{
+            transition: height 0.5s;
+        }
+
+        #cas1:hover{
+            height: 50px;
+    }
+    #cas2{
+        transition: height 0.5s;
+    }
+
+    #cas2:hover{
+        height: 50px;
+}
+#cas3{
+    transition: height 0.5s;
+}
+
+#cas3:hover{
+    height: 50px;
+}
+#cas4{
+    transition: height 0.5s;
+}
+
+#cas4:hover{
+    height: 50px;
+}
+#cas5{
+    transition: height 0.5s;
+}
+
+#cas5:hover{
+    height: 50px;
+}
+#cas6{
+    transition: height 0.5s;
+}
+
+#cas6:hover{
+    height: 50px;
+}
+#cas7{
+    transition: height 0.5s;
+}
+
+#cas7:hover{
+    height: 50px;
+}
+    
+    
+
+
+    .contenedorf{
+        background-color: lightblue;
+        padding: 10px;
+        margin: 5px;
+        align-items: baseline;
+        justify-content: baseline;
+        text-align: justify;
+    }
+
+    .formulario2{
+        align-items: center;
+        text-align: center;
+        font-family:$fuente3;
+    }
+    footer{
+        background-color: $color1;
+        color: black;
+        text-align: center;    
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border: solid 2px black;
+    }
+    .avion{
+        background-image: url(img/avion.png);
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100px;
+        width: 190px;
+        animation-name: efecto;
+        animation-iteration-count: 2;
+        animation-timing-function: ease-in;
+        animation-duration: 5s;
+        margin-left: 100px;
+    }
+    @keyframes efecto{
+        0% {
+            opacity: 0;
+        }
+
+        20%{
+            transform: translateX(-100px);
+            opacity: 1;
+        }
+
+        80% {
+            transform: translateX(-600px);
+            opacity: 1;}
+
+        100% {
+            transform: translateX(-9000px);
+            opacity: 0;
+        }
+    }
+
+
+    //***********nosotros*************//
+
+.contenedorNosotros{
+
+     .nostexto{
+        background-color: burlywood;
+            .text-nos{
+                color: blue;
+            }
+    }
+
+    .nosimagen{
+        background-image: url(img/viaje.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 60vh;
+        width: 100%;
+    }
+}
+
+   //***************paquetes**********//
+   #galeria .col-lg-4{
+       padding: 20px;
+   }
+   
+   #galeria img{
+
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+   }
+#galeria img:hover {
+    border: 5px solid blue;
+}
+#galeria p{
+    font-size: 20px;
+    font-family: $fuente2;
+    color: yellow;  
+    border: 2px solid black;
+    
+}
+.containerg{
+    border: 2px solid black;
+}
+
+.btn1--paq1{
+    background-color: lightblue;
+    color: red;
+    align-items: center;
+    align-content: center;
+    margin-left: 100px;
+}
+
+$redes:(
+    red1: georgia,
+    red2: arial,
+    red3: monospace,
+);
+    
+@each $red, $font in $redes {
+    .btn--#{$red} {
+        background-color: blue;
+        height: 50px; 
+        width: fit-content;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 20px;
+        color:yellow;
+        font-family: $font;
+
+    }
+}
+
+@import "footer"
+    
+
+
