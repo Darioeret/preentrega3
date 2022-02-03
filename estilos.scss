@@ -22,11 +22,12 @@ body{
 }
 .navbar{
     border: solid 2px black;
+    img {
+        height: 100px;
+        width: 100px;
+    }
 }
-.navbar img {
-    height: 100px;
-    width: 100px;
-}
+//****************inicio*****************
 main h2{
     color: black;
 }
@@ -47,14 +48,12 @@ main h2{
     border:solid 2px black ;
     .tituloPrincipal{
         @include tamañoTituloprincipal (white, scale(1))
-
-
     }
-    .subtituloPrincipal{
-        color: white;
-        font-size: $letra1;
-    }
-    
+
+        .subtituloPrincipal{
+            color: white;
+            font-size: $letra1;
+        }    
 }
 
 
@@ -83,12 +82,12 @@ h2:hover{
 height: 500px;
 background-color: lightblue;
 border:solid 2px black ;
-}
 .nleft p{
     padding: 20px;
     color: white;
     text-align: justify;
     font-family: 'Oswald', sans-serif;
+}
 }
 .nleft p::selection{
     color: yellow;
@@ -100,6 +99,9 @@ border:solid 2px black ;
 h3{
     font-family: 'Oswald', sans-serif;
 }
+
+
+
 .nright{
 height: 500px;
 background-color: lightcyan;
@@ -108,8 +110,9 @@ background-position: center;
 background-size: cover;
 border:solid 2px black ;
 }
+
 // ******************* .   SECCION DESTINOS   ********************
-.destinoContenedor{
+.container-fluid-2{
     background-color: aqua;
     width: 100vw;
     height: auto;
@@ -131,12 +134,9 @@ border:solid 2px black ;
     }
     .texto{
         background-color: burlywood;
-        width: 40vw;
-        height: 40vw;
-        
         min-height: min-content;
-        padding: 2vw;
-        overflow-y: scroll;
+        padding: 3vw;
+        overflow: hidden;
     }
 }
 // ******************* .   SECCION CONTACTO   ********************
@@ -163,111 +163,15 @@ border:solid 2px black ;
     }
 }
 
-.carousel-indicators li{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    }
-    .carousel-item{
-        text-align: center;
-    }
-
-    .carousel-item h3{
-        
-        font-family:$fuente2;
-        color:yellow;
-        font-size: 80px;
-    }
-    .carousel-item p{
-        
-        font-family: Arial, Helvetica, sans-serif;
-        color: yellow;
-        font-size: 40px;
-        
-        
-    }
     main{
         background-color: $color2;
     }
     
-    .contacto2 img{
-        height: 300px;
-        width: 500px;
-        
-    }
-    .contacto1{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
-        }
-        #cas1{
-            transition: height 0.5s;
-        }
-
-        #cas1:hover{
-            height: 50px;
-    }
-    #cas2{
-        transition: height 0.5s;
-    }
-
-    #cas2:hover{
-        height: 50px;
-}
-#cas3{
-    transition: height 0.5s;
-}
-
-#cas3:hover{
-    height: 50px;
-}
-#cas4{
-    transition: height 0.5s;
-}
-
-#cas4:hover{
-    height: 50px;
-}
-#cas5{
-    transition: height 0.5s;
-}
-
-#cas5:hover{
-    height: 50px;
-}
-#cas6{
-    transition: height 0.5s;
-}
-
-#cas6:hover{
-    height: 50px;
-}
-#cas7{
-    transition: height 0.5s;
-}
-
-#cas7:hover{
-    height: 50px;
-}
-    
     
 
 
-    .contenedorf{
-        background-color: lightblue;
-        padding: 10px;
-        margin: 5px;
-        align-items: baseline;
-        justify-content: baseline;
-        text-align: justify;
-    }
+    //footer//
 
-    .formulario2{
-        align-items: center;
-        text-align: center;
-        font-family:$fuente3;
-    }
     footer{
         background-color: $color1;
         color: black;
@@ -275,6 +179,8 @@ border:solid 2px black ;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         border: solid 2px black;
     }
+
+    //efecto avion//
     .avion{
         background-image: url(img/avion.png);
         background-size: cover;
@@ -313,7 +219,7 @@ border:solid 2px black ;
 
 .contenedorNosotros{
 
-     .nostexto{
+    .nostexto{
         background-color: burlywood;
             .text-nos{
                 color: blue;
@@ -330,37 +236,35 @@ border:solid 2px black ;
 }
 
    //***************paquetes**********//
-   #galeria .col-lg-4{
-       padding: 20px;
-   }
-   
-   #galeria img{
 
+#galerias .col-lg-4{
+    margin: 0;
+    padding: 25px;
+    p{
+        color: yellow;
+        text-align: center;
+        font-family: $fuente2;
+    }
+    
+
+    #galerias .col-lg-4 a{
+    
+        background-color: red;
+        text-decoration: none;
+        align-items: center;
+        padding-left: 50px;
+    }
+}
+
+#galerias img{
     width: 100%;
     height: 300px;
-    border: 2px solid black;
-   }
-#galeria img:hover {
-    border: 5px solid blue;
-}
-#galeria p{
-    font-size: 20px;
-    font-family: $fuente2;
-    color: yellow;  
-    border: 2px solid black;
-    
-}
-.containerg{
-    border: 2px solid black;
 }
 
-.btn1--paq1{
-    background-color: lightblue;
-    color: red;
-    align-items: center;
-    align-content: center;
-    margin-left: 100px;
+#galerias img:hover{
+    border:  5px solid white;
 }
+//fin de paquetes//
 
 $redes:(
     red1: georgia,

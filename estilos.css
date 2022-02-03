@@ -76,7 +76,7 @@ h2:hover {
   border: solid 2px black;
 }
 
-.nleft p {
+.nleft .nleft p {
   padding: 20px;
   color: white;
   text-align: justify;
@@ -109,7 +109,7 @@ h3 {
   border: solid 2px black;
 }
 
-.destinoContenedor {
+.container-fluid-2 {
   background-color: aqua;
   width: 100vw;
   height: auto;
@@ -122,25 +122,23 @@ h3 {
           flex-direction: row;
 }
 
-.destinoContenedor .carrusel {
+.container-fluid-2 .carrusel {
   background-color: blue;
   width: 60%;
   max-height: 40vw;
 }
 
-.destinoContenedor .carrusel .carousel .carousel-inner .carousel-item img {
+.container-fluid-2 .carrusel .carousel .carousel-inner .carousel-item img {
   height: 40vw;
 }
 
-.destinoContenedor .texto {
+.container-fluid-2 .texto {
   background-color: burlywood;
-  width: 40vw;
-  height: 40vw;
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
-  padding: 2vw;
-  overflow-y: scroll;
+  padding: 3vw;
+  overflow: hidden;
 }
 
 .contenedorContacto {
@@ -183,129 +181,8 @@ h3 {
   width: 40vw;
 }
 
-.carousel-indicators li {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
-
-.carousel-item {
-  text-align: center;
-}
-
-.carousel-item h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: yellow;
-  font-size: 80px;
-}
-
-.carousel-item p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: yellow;
-  font-size: 40px;
-}
-
 main {
   background-color: blue;
-}
-
-.contacto2 img {
-  height: 300px;
-  width: 500px;
-}
-
-.contacto1 {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-#cas1 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas1:hover {
-  height: 50px;
-}
-
-#cas2 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas2:hover {
-  height: 50px;
-}
-
-#cas3 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas3:hover {
-  height: 50px;
-}
-
-#cas4 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas4:hover {
-  height: 50px;
-}
-
-#cas5 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas5:hover {
-  height: 50px;
-}
-
-#cas6 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas6:hover {
-  height: 50px;
-}
-
-#cas7 {
-  -webkit-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-#cas7:hover {
-  height: 50px;
-}
-
-.contenedorf {
-  background-color: lightblue;
-  padding: 10px;
-  margin: 5px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
-  text-align: justify;
-}
-
-.formulario2 {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 footer {
@@ -392,40 +269,33 @@ footer {
   width: 100%;
 }
 
-#galeria .col-lg-4 {
-  padding: 20px;
+#galerias .col-lg-4 {
+  margin: 0;
+  padding: 25px;
 }
 
-#galeria img {
-  width: 100%;
-  height: 300px;
-  border: 2px solid black;
-}
-
-#galeria img:hover {
-  border: 5px solid blue;
-}
-
-#galeria p {
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+#galerias .col-lg-4 p {
   color: yellow;
-  border: 2px solid black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.containerg {
-  border: 2px solid black;
-}
-
-.btn1--paq1 {
-  background-color: lightblue;
-  color: red;
+#galerias .col-lg-4 #galerias .col-lg-4 a {
+  background-color: red;
+  text-decoration: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-left: 100px;
+  padding-left: 50px;
+}
+
+#galerias img {
+  width: 100%;
+  height: 300px;
+}
+
+#galerias img:hover {
+  border: 5px solid white;
 }
 
 .btn--red1 {
