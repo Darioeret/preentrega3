@@ -22,15 +22,20 @@ body{
 }
 .navbar{
     border: solid 2px black;
+        .nav-item{
+                padding: 20px;
+                font-family: $fuente1;
+                font-size: 22px;
+                
+        }
+    
     img {
         height: 100px;
         width: 100px;
     }
 }
 //****************inicio*****************
-main h2{
-    color: black;
-}
+
 
 @mixin tamañoTituloprincipal ($color, $transform) {
     color: $color;
@@ -64,7 +69,7 @@ h2{
     font-size: $letra2;
     padding: 15px;
     
-    
+
 }
 h2:hover{
     color: chocolate;
@@ -78,15 +83,18 @@ h2:hover{
     font-size: 40px;
 }
 
+
+
 .nleft{
 height: 500px;
-background-color: lightblue;
 border:solid 2px black ;
-.nleft p{
+p{
     padding: 20px;
     color: white;
     text-align: justify;
     font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
 }
 }
 .nleft p::selection{
@@ -100,7 +108,11 @@ h3{
     font-family: 'Oswald', sans-serif;
 }
 
-
+.btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .nright{
 height: 500px;
@@ -112,33 +124,66 @@ border:solid 2px black ;
 }
 
 // ******************* .   SECCION DESTINOS   ********************
-.container-fluid-2{
-    background-color: aqua;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    .carrusel{
-        background-color: blue;
-        width: 60%;
-        max-height: 40vw;
-        .carousel{
-            .carousel-inner{
-                .carousel-item{
-                    img{
-                        height: 40vw;
-                    }
-                }
-            }
+
+    .carousel-caption{
+        h5{
+            color: red;
+            text-align: center;
+            font-family: $fuente3;
+            font-size: 40px;
         }
     }
+    .carousel-caption{
+        p{
+            color: yellow;
+            text-align: center;
+            font-family: $fuente3;
+            font-size: 30px;
+        }
+    }
+        
+        
     .texto{
-        background-color: burlywood;
         min-height: min-content;
         padding: 3vw;
         overflow: hidden;
+        margin: 0;
+            h2{
+                font-size: 28px;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: $fuente1;
+                color: aqua;
+            }
     }
+    .texto{
+        p{
+            font-size: 18px;
+            color: aqua;
+        }
+    }
+
+    .acordion{
+        background-color: blue;
+        .card-header{
+            background-color: lightblue;
+            color: black;
+            text-decoration: none;
+        }
+    }
+.imagen2{
+    background-image: url(img/preguntas.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 380px;
+    
 }
+
+
+    #collapseOne{
+        background-color: white;
+    }
+
 // ******************* .   SECCION CONTACTO   ********************
 .contenedorContacto{
     background-color: cadetblue;
@@ -163,56 +208,25 @@ border:solid 2px black ;
     }
 }
 
-    main{
-        background-color: $color2;
-    }
-    
-    
-
-
     //footer//
 
     footer{
+        margin: 5px;
+        padding: 5px;
         background-color: $color1;
-        color: black;
-        text-align: center;    
+        color:black;  
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        border: solid 2px black;
+        align-items:center;
+        text-align: start;
+            h4{
+                text-align: left;
+                font-family: $letra2;
+                font-size: 30px;
+            }
     }
-
-    //efecto avion//
-    .avion{
-        background-image: url(img/avion.png);
-        background-size: cover;
-        background-position:center;
-        background-repeat: no-repeat;
-        height: 100px;
-        width: 190px;
-        animation-name: efecto;
-        animation-iteration-count: 2;
-        animation-timing-function: ease-in;
-        animation-duration: 5s;
-        margin-left: 100px;
-    }
-    @keyframes efecto{
-        0% {
-            opacity: 0;
-        }
-
-        20%{
-            transform: translateX(-100px);
-            opacity: 1;
-        }
-
-        80% {
-            transform: translateX(-600px);
-            opacity: 1;}
-
-        100% {
-            transform: translateX(-9000px);
-            opacity: 0;
-        }
-    }
+h4:hover{
+    color: yellow;
+}
 
 
     //***********nosotros*************//
@@ -220,14 +234,26 @@ border:solid 2px black ;
 .contenedorNosotros{
 
     .nostexto{
-        background-color: burlywood;
-            .text-nos{
-                color: blue;
-            }
+        border: 2px solid black;
+        h3{ 
+            color: white;
+            text-align: center;
+            font-family: $fuente2;
+            margin: 2px;
+            padding: 5px;
+        }
+        p{
+            color: white;
+            text-align: center;
+            font-family: $fuente2;
+            margin: 2px;
+            padding: 5px;
+        }
+
     }
 
     .nosimagen{
-        background-image: url(img/viaje.jpg);
+        background-image: url(img/nosotros2.jpg);
         background-position: center;
         background-size: cover;
         height: 60vh;
@@ -246,14 +272,6 @@ border:solid 2px black ;
         font-family: $fuente2;
     }
     
-
-    #galerias .col-lg-4 a{
-    
-        background-color: red;
-        text-decoration: none;
-        align-items: center;
-        padding-left: 50px;
-    }
 }
 
 #galerias img{
@@ -263,6 +281,26 @@ border:solid 2px black ;
 
 #galerias img:hover{
     border:  5px solid white;
+}
+
+.text-centro{
+                h1{
+                    text-align: center;
+                    color: white;
+                    font-family: $fuente1;
+                }
+                p{
+                    text-align: center;
+                    color: white;
+                    font-family: $fuente1;
+                }
+}
+
+.text-centro h1:hover{
+    color: chocolate;
+}
+.text-centro p:hover{
+    color: chocolate;
 }
 //fin de paquetes//
 
@@ -286,7 +324,6 @@ $redes:(
     }
 }
 
-@import "footer"
     
 
 
